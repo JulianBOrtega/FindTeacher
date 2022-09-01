@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <%- include("partials/head.ejs", { title: "Who were you again?"}) %> 
+  <body class="login">
+    <%- include("partials/header.ejs") %> 
+
+    <h1 style="margin-bottom: 15px">Login into your account</h1>
+    
+    <form action="/admin">
+      <label for="user">Username</label>
+      <input type="text" name="user" placeholder="e.x. Alex767" required>
+      <input type="submit" value="Login">
+
+      <% if (error) { %>
+        <p style="color:red; font-weight: 100; margin-top: 10px"> You don't have the permissions to access the admin page. </p>
+      <% } %>
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+.header
+{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--c_bg);
+    border-bottom: solid 1px var(--c_emphasis);
+    padding: 5px;
+    align-items: center;
+}
+
+.logo
+{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--c_emphasis);
+}
+
+.logo p
+{
+    font-family: var(--f_logo);
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.logo i
+{
+    font-size: 24px;
+}
+
+.navigation
+{
+    display: none;
+}
+
+.navigation li
+{
+    width: 200px;
+}
+
+.navigation li a
+{
+    font-family: var(--f_emphasis);
+}
+
+@media (min-width:870px)
+{
+    .navigation
+    {
+        display: flex;
+        justify-content: space-around;
+        width: auto;
+        list-style: none;
+        color: black;
+    }
+}

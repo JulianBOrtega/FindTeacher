@@ -1,0 +1,179 @@
+.home
+{
+    background-color: var(--c_bg);
+}
+
+/*! --- Teacher list --- */
+
+.home__teachers
+{
+    width: 100%;
+    height: 600px;
+    background-image: url('/images/teachers-bg.jpg');
+    background-size:cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: #303b3f;
+}
+
+.home__teachers--title
+{
+    padding: 25px 25px 0px;
+    font-size: 48px;
+}
+
+.home__teachers--location
+{
+    padding: 5px 25px;
+    font-size: 24px;
+}
+
+.home__teachers__list
+{
+    margin: 15px auto;
+    width: 96%;
+    height: 440px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+/*! --- Teacher list ::: Card --- */
+
+.home__teachers .card
+{
+    height: 200;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 80px;
+    padding: 20px;
+}
+
+.home__teachers .card--pfp
+{
+    width: 12%;
+    height: fit-content;
+    border-radius: 100%;
+}
+
+.home__teachers .card__info
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    width: 88%;
+    height: 150px;
+}
+
+.home__teachers .card__info__title
+{
+    display: flex;
+    align-items:baseline;
+    gap: 15px;
+    padding-bottom: 5px;
+}
+
+.home__teachers .card__info__title--name
+{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.home__teachers .card__info__title--course
+{
+    font-weight: 300;
+}
+
+.home__teachers .card__info--description
+{
+    font-weight: 100;
+}
+
+.home__teachers .card__buttonContainer
+{
+    position: absolute;
+    right: 6.8%;
+    top: 320px;
+}
+
+.home__teachers .card__buttonContainer--button
+{
+    position: relative;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+/*! --- Welcome --- */
+
+.home__welcome
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home__welcome__message
+{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--c_emphasis);
+}
+
+.home__welcome__message h1
+{
+    font-size: 52px;
+    font-weight: bolder;
+}
+
+.home__welcome__message h3
+{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.home__welcome img
+{
+    width: 30%;
+}
+
+/*! --- User access --- */
+
+.home__account
+{
+    background-color: var(--c_bg);
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.home__account h1
+{
+    text-align: center;
+    color: var(--c_emphasis);
+    width: 100%;
+    font-size: 48px;
+}
+
+.home__account a
+{
+    background-color: var(--c_emphasis);
+    padding: 25px;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+/*! --- Banner --- */
+
+.home__banner
+{
+    width: 100%;
+}

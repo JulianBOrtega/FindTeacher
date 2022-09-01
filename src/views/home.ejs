@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <%- include("partials/head.ejs", { title: "Home"}) %> 
+  <body class="home">
+
+	<%- include("partials/header.ejs") %> 
+
+	<section class="home__teachers">
+		<h3 class="home__teachers--title">Contact hot teachers in your area for private lessons</h3>
+		<h5 class="home__teachers--location">Looking at teachers in: Buenos Aires, Argentina</h5>
+
+		<div class="home__teachers__list">
+			<div class="card">
+				<img class="card--pfp" src="/images/julimena.jpg" alt="julimena">
+				<div class="card__info">
+					<div class="card__info__title">
+						<h2 class="card__info__title--name">Julián Mena</h2>
+						<h5 class="card__info__title--course">Programación Web - Fullstack</h5>
+					</div>
+					<p class="card__info--description">Qué onda, manada? Soy Juli Mena, les cuento que soy relativamente nuevo enseñando pero tengo muchísima experiencia en el backend. He trabajado en grandes compañías como Mercado Libre, Facebook y Google, así como también he hecho pequeños trabajitos por aquí y por allá. 
+					Además, tengo un canal de youtube en donde hago directos de programación y subo tips sobre el back-end. <br>
+					Subscribete y unite a mi manada, o bien contáctame y arreglemos un horario para nuestras clases.
+					</p>
+				</div>
+				<div class="card__buttonContainer">
+					<a class="card__buttonContainer--button" href="/user/julimena">See profile</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="home__welcome">
+		<div class="home__welcome__message">
+			<h1>Welcome to FindTeacher!</h1>
+			<h3>Here we can help you find the teacher of your dreams.</h3>
+			<h3>Learn just about anything you want.</h3>
+			<h3>From IT to Soft-skills. We have you covered, buddy.</h3>
+		</div>
+		<img src="/images/pic1.png" alt="pic1">
+	</section>
+
+	<section class="home__account">
+		<h1>Join us!</h1>
+		<a href="/register?profile=student">I'm a student</a>
+		<a href="/register?profile=teacher">I'm a teacher</a>
+		<a href="/login">I want to login!</a>
+	</section>
+
+	<a href="#"><img class="home__banner" src="/images/banner.png" alt="banner"></a>
+	
+  </body>
+</html>
