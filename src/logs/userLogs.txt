@@ -79,3 +79,15 @@ El usuario ingresó a la ruta: /login
 El usuario ingresó a la ruta: /admin?user=asdasd
 El usuario ingresó a la ruta: /login?error=true
 El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /register?profile=student
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /register?profile=teacher
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /login
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /
