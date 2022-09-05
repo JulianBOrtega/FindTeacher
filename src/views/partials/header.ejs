@@ -4,8 +4,25 @@
         <p>FindTeacher</p>
     </a>
     <ul class="navigation">
-        <li><a href="/register?profile=student">Register as a student</a></li>
-        <li><a href="/register?profile=teacher">Register as a teacher</a></li>
-        <li><a href="/login">Login to my account</a></li>
+        <% if(locals.user) {%>
+            <li><a href="#">My Teachers</a></li>
+            <li><a href="#">My Schedule</a></li>
+            <li>
+                <a class="navigation__profile" href="/user/<%= user.username %>">
+                    <% if (user.image && user.image.includes('http')) { %>
+                        <img src="<%= user.image %>" alt="user-img">
+                    <% } else { %>
+                        <img src="/images/<%= user.image %>" alt="user-img">
+                    <% } %> 
+                    <p><%= user.firstName %></p>
+                </a>
+            </li>
+            <li><a href="/logout">Logout</a></li>
+                
+        <% } else { %>
+            <li><a href="/register?profile=student">Register as a student</a></li>
+            <li><a href="/register?profile=teacher">Register as a teacher</a></li>
+            <li><a href="/login">Login to my account</a></li>
+        <% } %> 
     </ul>
 </header>

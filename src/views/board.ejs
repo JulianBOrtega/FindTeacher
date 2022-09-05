@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <%- include("partials/head.ejs", { title: "Welcome back"}) %> 
+  <body style="<%= locals.color && ("background-color: " + color) %>" class="board">
+    <%- include("partials/header.ejs") %>
+    
+    <main>
+      <h1>Hello, <%= user.firstName %>!</h1> 
+      <div>
+        <% if (locals.color) { %>
+          <p>Your choose <b><%= color %></b> as your theme color.</p>
+        <% } else { %>
+          <p style="color:red">Whoops! Looks like we forgot the color you choosed. <br>
+          Why don't you try to logout and then login again? Choose a new color!</p>
+        <% } %> 
+        
+        <p>Your email is <%= user.email %> and you're <%= user.age %> years old. <br>
+        Thanks for visiting us, <b><%= user.username %></b>!</p>
+        <br>
+
+        <% if (locals.color) { %>
+          <a style="background-color: white; padding: 10px; border-radius:10px; margin-top: 5px; color:<%= color %>;"href="/board/forgetColor">Forget (restore) color</a>
+        <% } %> 
+      </div>
+    </main>
+  </body>
+</html>

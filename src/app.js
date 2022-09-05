@@ -3,9 +3,12 @@ const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const express = require('express');
 const logger = require('morgan');
+const session = require('express-session');
 const path = require('path');
+const methodOverride =  require('method-override');
 
 const userLogs = require('./middlewares/userLogs');
+const localSession = require('./middlewares/localSession');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -16,6 +19,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
+app.use(methodOverride('_method'));
+app.use(session(
+  {
+    secret: 'FindTeacher11',
+    resave: false,
+    saveUninitialized: true
+  }));
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
@@ -23,7 +33,7 @@ app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
 
 // ************ WRITE YOUR CODE FROM HERE ************
 app.use(userLogs);
-
+app.use(localSession);
 
 // ************ Route System require and use() ************
 const mainRouter = require('./routes/main');

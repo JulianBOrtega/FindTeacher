@@ -5,5 +5,104 @@
     <%- include("partials/header.ejs") %> 
 
     <h1>Registering as a <%= profile %></h1>
+    
+    <form class="register__form" action="/register?profile=<%= profile %>" method="POST">
+      <div> 
+        <input type="radio" name="type" value="student" <%= profile === "student" && "checked" %> hidden>
+        <input type="radio" name="type" value="teacher" <%= profile === "teacher" && "checked" %> hidden>
+
+        <div>
+          <input type="text" name="username" placeholder="Username" value="<%= locals.old && old.username %>" required>
+          <% if (locals.errors && errors.username) { %>
+            <small style="color: red"> <%= errors.username.msg %> </small>
+          <% } %>
+        </div>
+
+        <div>
+          <input type="email" name="email" placeholder="Email address" value="<%= locals.old && old.email %>" required>
+          <% if (locals.errors && errors.email) { %>
+            <small style="color: red"> <%= errors.email.msg %> </small>
+          <% } %>
+        </div>
+      </div>
+      
+      <div>
+        <div>
+          <input type="text" name="firstName" placeholder="First name" value="<%= locals.old && old.firstName %>" required>
+          <% if (locals.errors && errors.firstName) { %>
+            <small style="color: red"> <%= errors.firstName.msg %> </small>
+          <% } %>
+        </div>
+
+        <div>
+          <input type="text" name="lastName" placeholder="Last name" value="<%= locals.old && old.lastName %>" required>
+          <% if (locals.errors && errors.lastName) { %>
+            <small style="color: red"> <%= errors.lastName.msg %> </small>
+          <% } %>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <label for="age">Your age</label>
+          <input type="number" name="age" placeholder="Your age" value="<%= locals.old && old.age %>">
+        </div>
+        <% if (locals.errors && errors.age) { %>
+          <small style="color: red"> <%= errors.age.msg %> </small>
+        <% } %>
+      </div>
+
+      <div>
+        <% if (profile === "teacher") { %>
+          <div>
+            <input type="text" name="knowledge" placeholder="What do you teach?" value="<%= locals.old && old.knowledge %>" required>
+            <% if (locals.errors && errors.knowledge) { %>
+              <small style="color: red"> <%= errors.knowledge.msg %> </small>
+            <% } %>
+          </div>
+        <% } %>
+
+        <div>
+          <input type="text" name="location" placeholder="Country" value="<%= locals.old && old.location %>" required>
+          <% if (locals.errors && errors.location) { %>
+            <small style="color: red"> <%= errors.location.msg %> </small>
+          <% } %>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <input type="password" name="password" placeholder="Password" value="<%= locals.old && old.password %>" required>
+          <% if (locals.errors && errors.password) { %>
+            <small style="color: red"> <%= errors.password.msg %> </small>
+          <% } %>
+        </div>
+
+        <div>
+          <input type="password" name="verifyPassword" placeholder="Repeat your password" value="<%= locals.old && old.verifyPassword %>" required>
+          <% if (locals.errors && errors.verifyPassword) { %>
+            <small style="color: red"> <%= errors.verifyPassword.msg %> </small>
+          <% } %>
+        </div>
+      </div>
+
+      <div class="register__form__color">
+        <label for="color">Lastly, select a background color!</label>
+        <select name="color" id="color">
+          <option value="#146dc0">Default</option>
+          <option value="black">Black</option>
+          <option value="DarkCyan">Dark Cyan</option>
+          <option value="LightSlateGray">Light Slate Gray</option>
+        </select>
+      </div>
+
+      <div>
+        <input type="checkbox" id="rememberColor" name="rememberColor" checked>
+        <label for="rememberColor">Remember color</label>
+      </div>
+      
+      <input type="submit" value="Register">
+    </form>
+
   </body>
 </html>

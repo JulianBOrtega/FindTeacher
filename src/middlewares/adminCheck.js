@@ -2,12 +2,12 @@ const admins = ['ada', 'vim', 'tim', 'greta'];
 
 module.exports = (req, res, next) =>
 {
-    if(admins.includes(req.query.user.toLowerCase()))
+    if(!res.locals.user || !admins.includes(res.locals.user.username.toLowerCase()))
     {
-        next();
+        return res.redirect("/");
     }
     else
     {
-        return res.redirect("/login?error=true");
+        next();
     }
 }
