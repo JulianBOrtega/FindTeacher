@@ -1,0 +1,23 @@
+.board__main
+{
+    margin: 100px auto;
+    background-color: white;
+    padding: 20px 100px 30px;
+    width: 750px;
+    border-radius: 20px;
+}
+
+.board__main p, .board__main h1, .board__main b
+{
+    color: var(--c_emphasis);
+    margin-bottom: 5px;
+}
+
+.board__main a
+{
+    background-color: var(--c_emphasis); 
+    padding: 10px; 
+    border-radius:10px; 
+    margin-top: 5px; 
+    color: white;
+}

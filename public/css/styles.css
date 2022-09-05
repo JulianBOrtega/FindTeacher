@@ -2,7 +2,9 @@
 @import "/css/general.css";
 @import "/css/header.css";
 @import "/css/home.css";
+@import "/css/board.css";
 @import "/css/register.css";
+@import "/css/login.css";
 
 /*! -- Fuentes -- */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400&family=Cinzel:wght@600&family=Rubik:wght@300;500;800&display=swap');

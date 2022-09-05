@@ -6,43 +6,47 @@
 
     <h1 style="margin-bottom: 15px">Login into your account</h1>
     
-    <form action="/login" method="POST">
-      <div>
-        <input type="text" name="username" placeholder="Username" value="<%= locals.old && old.username %>" required>
-        <% if (locals.errors && errors.username) { %>
-          <small style="color: red"> <%= errors.username.msg %> </small>
-        <% } %>
-      </div>
+    <main class="login__main">
+      <form action="/login" method="POST">
+        <div class="writtenInput">
+          <input type="text" name="username" placeholder="Username" value="<%= locals.old && old.username %>" required>
+          <% if (locals.errors && errors.username) { %>
+            <small style="color: red"> <%= errors.username.msg %> </small>
+          <% } %>
+        </div>
+  
+        <div class="writtenInput"> 
+          <input type="password" name="password" placeholder="Password" value="<%= locals.old && old.password %>" required>
+          <% if (locals.errors && errors.password) { %>
+            <small style="color: red"> <%= errors.password.msg %> </small>
+          <% } %>
+        </div>
+  
+        <div>
+          <input type="checkbox" id="remember" name="remember" checked>
+          <label for="remember">Remember me</label>
+        </div>
+  
+        <hr>
 
-      <div> 
-        <input type="password" name="password" placeholder="Password" value="<%= locals.old && old.password %>" required>
-        <% if (locals.errors && errors.password) { %>
-          <small style="color: red"> <%= errors.password.msg %> </small>
-        <% } %>
-      </div>
+        <div>
+          <label for="color">Lastly, select a background color!</label>
+          <select name="color" id="color">
+            <option value="#146dc0">Default</option>
+            <option value="black">Black</option>
+            <option value="DarkCyan">Dark Cyan</option>
+            <option value="LightSlateGray">Light Slate Gray</option>
+          </select>
 
-      <div>
-        <input type="checkbox" id="remember" name="remember" checked>
-        <label for="remember">Remember me</label>
-      </div>
-
-      <div>
-        <label for="color">Lastly, select a background color!</label>
-        <select name="color" id="color">
-          <option value="#146dc0">Default</option>
-          <option value="black">Black</option>
-          <option value="DarkCyan">Dark Cyan</option>
-          <option value="LightSlateGray">Light Slate Gray</option>
-        </select>
-      </div>
-
-      <div>
-        <input type="checkbox" id="rememberColor" name="rememberColor" checked>
-        <label for="rememberColor">Remember color</label>
-      </div>
-
-      <input type="submit" value="Login">
-    </form>
+          <div class="rememberColor">
+            <input type="checkbox" id="rememberColor" name="rememberColor" checked>
+            <label for="rememberColor">Remember color</label>
+          </div>
+        </div>
+  
+        <input type="submit" value="Login">
+      </form>
+    </main>
 
   </body>
 </html>

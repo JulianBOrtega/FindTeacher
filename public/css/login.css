@@ -1,0 +1,86 @@
+.login h1
+{
+    text-align: center;
+    margin-top: 20px;;
+}
+
+.login__main
+{
+    margin: 0px auto;
+    background-color: white;
+    padding: 40px 110px 40px;
+    width: 750px;
+    border-radius: 20px;
+}
+
+.login__main p, .login__main h1, .login__main b, .login__main label
+{
+    color: var(--c_emphasis);
+    margin-bottom: 5px;
+}
+
+.login__main input
+{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: solid 1px grey;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10px;
+}
+
+.login__main input[type="checkbox"]
+{
+    height: 12px;
+    width: 12px;
+    margin-right: 5px;
+}
+
+.login__main label
+{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.login__main div
+{
+    display:flex;
+    align-items: baseline;
+    padding: 5px;
+}
+
+.login__main select
+{
+    margin-left: 20px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-bottom: solid 1px grey;
+    padding: 5px 5px 0px 10px;
+    border-radius: 10px;
+}
+
+.login__main .rememberColor
+{
+    margin-left: 15px;
+}
+
+.login__main input[type="submit"]
+{
+    background-color: var(--c_emphasis);
+    border: none;
+    color: white;
+    margin-top: 25px;
+}
+
+.login__main small
+{
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.login__main .writtenInput
+{
+    flex-direction: column;
+}
